@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
+    public float movimiento;
+     public float rotacion;
     public float speed = 20f;
+    public float velocidadRotacion = 60f;
     private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -15,10 +18,11 @@ public class move : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float MoveVertical = Input.GetAxis("Vertical");
-
-        Vector3 movement = new Vector3(moveHorizontal,0.0f, MoveVertical);
-        rb.AddForce(movement * speed);
+        rotacion = Input.GetAxis("Horizontal")*velocidadRotacion;
+        movimiento = Input.GetAxis("Vertical")*speed;
+        movimiento *= Time.deltaTime;
+        rotacion *= Time.deltaTime;
+        transform.Translate(0,0,movimiento);
+        transform.Rotate(0,rotacion,0);
     }
 }
