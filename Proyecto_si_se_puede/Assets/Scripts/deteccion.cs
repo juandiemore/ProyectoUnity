@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class deteccion : MonoBehaviour
 {
-
+    private move movimiento;
     // Start is called before the first frame update
     void Awake()
     {
+        movimiento = GetComponent<move>();
         GetComponent<Collider>();
     }
 
