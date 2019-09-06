@@ -9,6 +9,10 @@ public class powerUp : MonoBehaviour
     private bool rotateX;
     private float rotationSpeed;
 
+ //   GameObject power;
+    void Awake(){
+   // power = GetComponent<GameObject>();
+    }
     void Start()
     {
         x = 0.0f;
@@ -32,32 +36,26 @@ public class powerUp : MonoBehaviour
             Vector3 enano = new Vector3(.5f,.5f,.5f);
             Vector3 normal = new Vector3(1,1,1);
             if(other.transform.lossyScale != enano){
-
+            this.transform.gameObject.SetActive(false);
             other.transform.localScale = enano;
             }else {
                 other.transform.localScale = normal;
+                this.transform.gameObject.SetActive(false);
             }
 
         }
         else if(this.name == "Speed"){
             move Smove =  other.GetComponent<move>();
             float actualSpeed = Smove.getSpeed();
-            float extraSpeed = 20f;
+            float extraSpeed = 10f;
              actualSpeed += extraSpeed;
             Smove.setSpeed(actualSpeed);
-            StartCoroutine(esperar());
-            actualSpeed -= extraSpeed;
-            Smove.setSpeed(actualSpeed);
+            this.transform.gameObject.SetActive(false);
+            
         }
    
    }
 }
 
- IEnumerator  esperar(){
 
-            yield return new WaitForSeconds(3f); 
-            
-
-
-    }
 }

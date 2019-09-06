@@ -28,7 +28,7 @@ public class AjControl : MonoBehaviour
         }
 
         // corriendo 
-        if(movi.speed > 20 && movi.movimiento != 0){
+        if(movi.speed > 10 && movi.movimiento != 0){
             anim.SetBool("IsRunning",true);
         }else{
             anim.SetBool("IsRunning",false);
