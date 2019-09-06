@@ -3,8 +3,8 @@
 ### Se requiere : ###
 <ul>
   
-  <li>Personaje en mixamo</li> <a href="https://www.mixamo.com/#/"> mixamo</a> ###check###
-  <li>Maquina de estados (5)</li> ###check###
+  <li>Personaje en mixamo</li> <a href="https://www.mixamo.com/#/"> mixamo</a> **check**
+  <li>Maquina de estados (5)</li> ***check***
   <li>Escenario</li> 
   <li>Zonas de interaccion (5 tipos 10 zonas)</li> ###check###
   <li>Animacionese scenario 5 tipos</li>
