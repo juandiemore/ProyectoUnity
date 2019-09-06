@@ -47,7 +47,7 @@ public class powerUp : MonoBehaviour
         else if(this.name == "Speed"){
             move Smove =  other.GetComponent<move>();
             float actualSpeed = Smove.getSpeed();
-            float extraSpeed = 10f;
+            float extraSpeed = 5f;
              actualSpeed += extraSpeed;
             Smove.setSpeed(actualSpeed);
             this.transform.gameObject.SetActive(false);
