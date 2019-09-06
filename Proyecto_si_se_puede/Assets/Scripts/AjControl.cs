@@ -27,4 +27,7 @@ public class AjControl : MonoBehaviour
             anim.SetBool("IsWalking",false);
         }
     }
+    public void dolor(){
+        anim.SetTrigger("IsHurt");
+    }
 }
