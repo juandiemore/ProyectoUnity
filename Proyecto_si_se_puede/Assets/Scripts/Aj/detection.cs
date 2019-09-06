@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class detection : MonoBehaviour
 {
+[SerializeField] public GameObject interaccion;
   [SerializeField] public GameObject msgPanel;
   [SerializeField] Text mtext;
         // Start is called before the first frame update
@@ -14,14 +15,19 @@ public class detection : MonoBehaviour
     }
     void Start(){
         msgPanel.SetActive(false);
+        interaccion.SetActive(false);
     }
     // Update is called once per frame
     void OnTriggerEnter(Collider other)
     {
         if(other.name == "npc"){
+         interaccion.SetActive(true);   
+        if (Input.GetKeyUp(KeyCode.E)){
         string msg = other.GetComponent<MsgNpc>().getMsg();
         mtext.text = msg;
          msgPanel.SetActive(true);
+        }
+       
         }
     }
 
@@ -29,6 +35,7 @@ public class detection : MonoBehaviour
     {
         if(other.name == "npc"){
          msgPanel.SetActive(false);
+         interaccion.SetActive(false);
         }
     }
 }
