@@ -26,6 +26,13 @@ public class AjControl : MonoBehaviour
         }else{
             anim.SetBool("IsWalking",false);
         }
+
+        // corriendo 
+        if(movi.speed > 20 && movi.movimiento != 0){
+            anim.SetBool("IsRunning",true);
+        }else{
+            anim.SetBool("IsRunning",false);
+        }
     }
     public void dolor(){
         anim.SetTrigger("IsHurt");

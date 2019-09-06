@@ -19,10 +19,17 @@ public class move : MonoBehaviour
     void FixedUpdate()
     {
         rotacion = Input.GetAxis("Horizontal")*velocidadRotacion;
+        
         movimiento = Input.GetAxis("Vertical")*speed;
         movimiento *= Time.deltaTime;
         rotacion *= Time.deltaTime;
         transform.Translate(0,0,movimiento);
         transform.Rotate(0,rotacion,0);
+    }
+    public float getSpeed(){
+        return speed;
+    }
+    public void setSpeed(float s){
+        this.speed = s;
     }
 }

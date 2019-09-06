@@ -15,6 +15,7 @@ public class healtpack : MonoBehaviour
     private void OnTriggerStay(Collider other) {
         if(other.name == "aj"){
             other.GetComponent<vida_aj>().TakeHeal(cura);
+          
            // other.GetComponent<AjControl>().dolor();
          
         }
