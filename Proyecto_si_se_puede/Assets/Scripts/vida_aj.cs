@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 public class vida_aj : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -26,7 +25,7 @@ public class vida_aj : MonoBehaviour
        
         vida -=damage;
         if(vida <= 0){
-            SceneManager.LoadScene("GameOver");
+            print("mueres");
         }
     }
     public void TakeHeal(float cura){
