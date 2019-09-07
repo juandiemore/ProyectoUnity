@@ -27,11 +27,11 @@ public class AjControl : MonoBehaviour
             anim.SetBool("IsWalking",false);
         }
 
-        // corriendo 
-        if(movi.speed > 20 && movi.movimiento != 0){
-            anim.SetBool("IsRunning",true);
+        // golpe 
+        if(Input.GetKeyDown(KeyCode.P)){
+            anim.SetBool("IsBeating",true);
         }else{
-            anim.SetBool("IsRunning",false);
+            anim.SetBool("IsBeating",false);
         }
     }
     public void dolor(){
