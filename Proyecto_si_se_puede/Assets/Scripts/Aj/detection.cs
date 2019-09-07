@@ -22,7 +22,7 @@ public class detection : MonoBehaviour
     {
         if(other.name == "npc"){
          interaccion.SetActive(true);   
-        if (Input.GetKeyUp(KeyCode.E)){
+        if(Input.GetKeyDown(KeyCode.E)){
         string msg = other.GetComponent<MsgNpc>().getMsg();
         mtext.text = msg;
          msgPanel.SetActive(true);
