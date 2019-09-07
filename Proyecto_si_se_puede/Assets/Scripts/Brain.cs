@@ -30,7 +30,8 @@ public class Brain : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) {
         if(other.name == "aj"){
-          //  recoger();
+          other.GetComponent<brainCounter>().addBrain();
+           this.transform.gameObject.SetActive(false);
         }
     }
   

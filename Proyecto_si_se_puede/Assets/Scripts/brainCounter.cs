@@ -1,21 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class brainCounter : MonoBehaviour
 {
- //  [SerializeField] public Text puntos;
-    int score;
+ [SerializeField] Text puntos;
+    int score = 1;
     // Start is called before the first frame update
     void Start()
     {
-     //  puntos = GetComponent<Text>();
+       puntos.text = "X0";
     }
 
     // Update is called once per frame
-    void Update()
+    public void addBrain()
     {
-       // puntos = "X"+score;
+        puntos.text = "X"+score;
         score+=1;
+
     }
 }
