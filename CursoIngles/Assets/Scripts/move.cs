@@ -6,7 +6,7 @@ public class move : MonoBehaviour
 {
     public float movimiento;
      public float rotacion;
-    public float speed = 20f;
+    public float speed = 10f;
     public float velocidadRotacion = 60f;
     private Rigidbody rb;
     // Start is called before the first frame update
